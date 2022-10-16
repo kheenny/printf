@@ -1,6 +1,3 @@
-
-252 lines (227 sloc)  6.37 KB
-
 #include "main.h"
 
 /************************* WRITE HANDLE *************************/
@@ -132,7 +129,7 @@ int write_num(int ind, char buffer[],
 			if (extra_c)
 				buffer[--padd_start] = extra_c;
 			return (write(1, &buffer[padd_start], i - padd_start) +
-				write(1, &buffer[ind], length - (1 - padd_start)));
+					write(1, &buffer[ind], length - (1 - padd_start)));
 		}
 	}
 	if (extra_c)
@@ -244,7 +241,7 @@ int write_pointer(char buffer[], int ind, int length,
 			buffer[1] = '0';
 			buffer[2] = 'x';
 			return (write(1, &buffer[padd_start], i - padd_start) +
-				write(1, &buffer[ind], length - (1 - padd_start) - 2));
+					write(1, &buffer[ind], length - (1 - padd_start) - 2));
 		}
 	}
 	buffer[--ind] = 'x';
