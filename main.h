@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
-#define BUFF_SIZE 102
+#define BUFF_SIZE 1024
 
 /* FLAGS */
 #define F_MINUS 1
@@ -35,7 +35,7 @@ struct fmt
  * typedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
- * @fm_t: The function associated.
+ * @fm_t: The function which is associated.
  */
 typedef struct fmt fmt_t;
 
